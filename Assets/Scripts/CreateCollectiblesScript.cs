@@ -20,8 +20,6 @@ public class CreateCollectiblesScript : MonoBehaviour
         int x, y, z, xTerrain, zTerrain;
         x = (int)Random.Range(0,terrain_data.size.x);
         z = (int)Random.Range(0,terrain_data.size.z);
-        //xTerrain = (int)((x + heightmap_width) % heightmap_width);
-        //zTerrain = (int)((z + heightmap_height) % heightmap_height);
         y = (int)terrain_data.GetHeight(z,x);
         y = (int)terrain.SampleHeight(new Vector3(x,y,z));
         return new Vector3(x,y+1,z);
